@@ -34,6 +34,11 @@ Once I was happy with the SQL schema, I re-asked Chat GPT to
 - generate some unit tests for the ORM models
 
 #### Migrations
+The project comes with two SQL scripts that will initialize the database schema and 
+populate the database with some minimal data to help testing the app.
+
+These are run as database migrations everytime the application starts.
+
 Because it usually works better for larger projects, I prefer to
 rely on migration tools to apply an SQL schema rather than rely on the ORM
 to create the schema. The main reason is to be able to control when the
