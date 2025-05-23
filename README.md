@@ -116,6 +116,17 @@ curl "http://localhost:8000/orders/stats/top_in_store_users?limit=5"
 
 #### Run Locally
 
+**Database**
+
+Make sure you have a postgres server (v17) running with 
+the following:
+```
+- an existing database named: pier2imports
+- user name: postgres
+- password: changemeinprod!
+- port: 5432
+```
+
 **Create a Virtual Environment and install the requirements**
 
 Make sure to clone the github repository first as described above 

@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, MetaData, Engine
 from sqlalchemy.orm import sessionmaker
-from .config.settings import Settings
-from .config.logger import get_logger
+from app.config.settings import Settings
+from app.config.logger import get_logger
 import subprocess
 
 engine: Engine | None = None

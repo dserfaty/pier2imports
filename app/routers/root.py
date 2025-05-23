@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 from typing import Annotated
-from ..config.settings import Settings, get_settings
+from app.config.settings import Settings, get_settings
 
 
 router = APIRouter(prefix="", tags=["root"])
