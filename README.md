@@ -84,6 +84,12 @@ and a container for the api application.
 Then open a browser to: http://localhost:8000/docs for access to the swagger UI 
 and the ability to test the api endpoints.
 
+After testing, to get rid on the containers simply enter:
+```
+docker-compose down
+```
+
+
 #### Sample API Calls
 
 Sample CURL commands for the required use api cases:
