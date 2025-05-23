@@ -8,7 +8,7 @@ router = APIRouter(prefix="", tags=["root"])
 
 @router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Welcome to Pier2 Imports Demo Application"}
 
 
 @router.get("/health")

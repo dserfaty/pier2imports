@@ -159,7 +159,7 @@ export DATABASE_PORT=5432
 export DATABASE_USER=postgres
 export PYWAY_DATABASE_MIGRATION_DIR=migrations
 
-python app/main.py
+python -m uvicorn app.main:app 
 ```
 
 #### Run the test cases
