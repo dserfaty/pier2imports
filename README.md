@@ -89,7 +89,8 @@ and a container for the api application.
 Then open a browser to: http://localhost:8000/docs for access to the swagger UI 
 and the ability to test the api endpoints.
 
-After testing, to get rid on the containers simply enter:
+Later on when you are done testing the application, you can enter the following
+to get rid on the containers:
 ```
 docker-compose down
 ```
@@ -100,6 +101,9 @@ docker-compose down
 Sample CURL commands for the required use api cases:
 ```
 curl "http://localhost:8000/orders?customer_contact=555-0101"
+```
+```
+curl "http://localhost:8000/orders?customer_contact=arthur.dent%40galaxy.com"
 ```
 ```
 curl "http://localhost:8000/orders/stats/counts/by_billing_zip?ascending=false&limit=5"
@@ -115,6 +119,8 @@ curl "http://localhost:8000/orders/stats/top_in_store_users?limit=5"
 ```
 
 #### Run Locally
+
+If you want to run the application locally or if you wish to run the unit tests.
 
 **Database**
 
@@ -164,7 +170,7 @@ python -m uvicorn app.main:app
 
 #### Run the test cases
 
-Enter the following commands:
+With the local postgres database running, Enter the following commands:
 ```
 cd pier2imports
 pytest
