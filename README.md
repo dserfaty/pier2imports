@@ -62,12 +62,19 @@ scope of this exercise.
 ### Install and run
 
 #### Clone the repo
-TBD
+From a test directory type:
+```
+git clone git@github.com:dserfaty/pier2imports.git
+```
 
 #### Test with Docker
-From the directory where you issued the git clone command:
+From the directory where you issued the git clone command type:
 ```
 cd pier2imports
+```
+
+And start docker-compose: 
+```
 docker-compose up
 ```
 
@@ -77,11 +84,47 @@ and a container for the api application.
 Then open a browser to: http://localhost:8000/docs for access to the swagger UI 
 and the ability to test the api endpoints.
 
-#### Test cases
+#### Run Locally
 
-TBD
+**Create a Virtual Environment and install the requirements**
 
-#### Test Locally
+Make sure to clone the github repository first as described above 
+and enter the following commands:
 
-TBD
+```
+cd pier2imports
+```
+Create a virtual environment:
+```
+python3 -m venv env
+```
+And activate it:
+```
+source env/bin/activate
+```
+Then install the dependencies:
+```
+pip install -r requirements.txt
+``` 
 
+**Run the App**
+
+Enter the following commands:
+```
+export DATABASE_HOST=localhost
+export DATABASE_NAME=pier2imports
+export DATABASE_PASSWORD=changemeinprod!
+export DATABASE_PORT=5432
+export DATABASE_USER=postgres
+export PYWAY_DATABASE_MIGRATION_DIR=migrations
+
+python app/main.py
+```
+
+#### Run the test cases
+
+Enter the following commands:
+```
+cd pier2imports
+pytest
+```
