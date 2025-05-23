@@ -84,6 +84,25 @@ and a container for the api application.
 Then open a browser to: http://localhost:8000/docs for access to the swagger UI 
 and the ability to test the api endpoints.
 
+#### Sample API Calls
+
+Sample CURL commands for the required use api cases:
+```
+curl "http://localhost:8000/orders?customer_contact=555-0101"
+```
+```
+curl "http://localhost:8000/orders/stats/counts/by_billing_zip?ascending=false&limit=5"
+```
+```
+curl "http://localhost:8000/orders/stats/counts/by_shipping_zip?ascending=false&limit=5"
+```
+```
+curl "http://localhost:8000/orders/stats/in_store_purchases/by_hour?ascending=true"
+```
+```
+curl "http://localhost:8000/orders/stats/top_in_store_users?limit=5"
+```
+
 #### Run Locally
 
 **Create a Virtual Environment and install the requirements**
