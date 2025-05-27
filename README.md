@@ -98,7 +98,7 @@ docker-compose down
 
 #### Sample API Calls
 
-Sample CURL commands for the required use api cases:
+Sample CURL commands for the required api use cases:
 ```
 curl "http://localhost:8000/orders?customer_contact=555-0101"
 ```
