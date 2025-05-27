@@ -16,7 +16,7 @@ I then reviewed the schema and made sure that the content made sense.
 For example, a lot of the foreign constraints generated were 
 'ON DELETE CASCADE', which I would like to avoid and replaced them 
 with RESTRICT instead to prevent deletion of the parent. 
-In a real life project, I would likely never delete the original parent 
+In a real life project, I would likely not always delete the original parent 
 row but instead mark the parent data as ‘deleted’ and anonymize it 
 if the business rules required so as it is likely we would want to still 
 be able to keep the data at least for analytics.
