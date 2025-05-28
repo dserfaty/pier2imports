@@ -1,13 +1,11 @@
 -- This file contains some sample queries for all the basic use cases
 
 -- a total count of orders aggregated by billing zip code, descending or ascending.
-SELECT a.zip_code, COUNT(DISTINCT o.id) AS order_count
+SELECT a.zip_code, COUNT(o.id) AS order_count
 FROM orders o
-         JOIN order_shipping_addresses osa ON o.id = osa.order_id
-         JOIN addresses a ON a.id = osa.address_id
+JOIN addresses a ON o.billing_address_id = a.id
 GROUP BY a.zip_code
-ORDER BY order_count DESC;
--- or ASC
+ORDER BY order_count DESC;  -- or ASC for ascending
 
 -- a total count of orders aggregated by shipping zip code, descending or ascending.
 SELECT a.zip_code, COUNT(DISTINCT o.id) AS order_count
